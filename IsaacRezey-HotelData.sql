@@ -72,7 +72,7 @@ INSERT INTO RoomAmenity (RoomNumber, AmenityId) VALUES
 	(402, 4);
 
 INSERT INTO Guest(FirstName, LastName, Address, City, State, Zipcode, Phone) VALUES
-    ("Rezey", "Isaac", "128 Broadway Blvd", "Viridian Forest", "MN", "12345", "3085182244"),
+    ("Isaac", "Rezey", "128 Broadway Blvd", "Viridian Forest", "MN", "12345", "3085182244"),
 	("Mack", "Simmer", "379 Old Shore Street", "Council Bluffs", "IA", "51501", "2915530508"),
 	("Bettyann", "Seery", "750 Wintergreen Dr.", "Wasilla", "AK", "99654", "4782779632"),
 	("Duane", "Cullison", "9662 Foxrun Lane", "Harlingen", "TX", "78552", "3084940198"),
