@@ -9,9 +9,7 @@ CREATE TABLE RoomType (
     RoomOccupancy INT,
     MaxRoomOccupancy INT,
     ExtraPersonFee DECIMAL(5, 2),
-    Price DECIMAL(6, 2),
-    hasJacuzzi BOOL,
-    hasOven BOOL
+    Price DECIMAL(6, 2)
 );
 
 CREATE TABLE Room (
@@ -20,9 +18,23 @@ CREATE TABLE Room (
 	FOREIGN KEY fk_Room_RoomType (RoomTypeId)
 		REFERENCES RoomType (RoomTypeId),
 	
-    ADA BOOL,
-    hasMicrowave BOOL,
-    hasFridge BOOL
+    ADA BOOL
+);
+
+CREATE TABLE Amenity (
+	AmenityId INT PRIMARY KEY AUTO_INCREMENT,
+    Name VARCHAR(20)
+);
+
+CREATE TABLE RoomAmentiy (
+	RoomAmenityId INT PRIMARY KEY AUTO_INCREMENT,
+	RoomId INT,
+    FOREIGN KEY fk_Room_RoomAmenity (RoomId)
+		REFERENCES Room (RoomId),
+        
+    AmenityId INT,
+    FOREIGN KEY fk_Amenty_RoomAmenity (AmenityId)
+		REFERENCES Amenity(AmenityId)
 );
 
 CREATE TABLE Guest (
