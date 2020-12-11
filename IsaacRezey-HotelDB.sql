@@ -26,7 +26,7 @@ CREATE TABLE Amenity (
     Name VARCHAR(20)
 );
 
-CREATE TABLE RoomAmentiy (
+CREATE TABLE RoomAmenity (
 	RoomAmenityId INT PRIMARY KEY AUTO_INCREMENT,
 	RoomNumber INT,
     FOREIGN KEY fk_Room_RoomAmenity (RoomNumber)
