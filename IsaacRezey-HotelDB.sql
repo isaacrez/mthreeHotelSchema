@@ -60,7 +60,6 @@ CREATE TABLE Reservation (
         
 	StartDate DATE,
     EndDate DATE,
-    TotalCost DEC(8, 2),
     Adults INT,
     Children INT
 );
