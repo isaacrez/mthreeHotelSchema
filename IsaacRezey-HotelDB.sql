@@ -28,9 +28,9 @@ CREATE TABLE Amenity (
 
 CREATE TABLE RoomAmentiy (
 	RoomAmenityId INT PRIMARY KEY AUTO_INCREMENT,
-	RoomId INT,
-    FOREIGN KEY fk_Room_RoomAmenity (RoomId)
-		REFERENCES Room (RoomId),
+	RoomNumber INT,
+    FOREIGN KEY fk_Room_RoomAmenity (RoomNumber)
+		REFERENCES Room (RoomNumber),
         
     AmenityId INT,
     FOREIGN KEY fk_Amenty_RoomAmenity (AmenityId)
