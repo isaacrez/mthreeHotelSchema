@@ -111,3 +111,16 @@ INSERT INTO Reservation (RoomNumber, GuestId, Adults, Children, StartDate, EndDa
 	(206, 2, 2, 0, "2023-11-22", "2023-11-25"),
 	(301, 2, 2, 2, "2023-11-22", "2023-11-25"),
 	(302, 11, 2, 0, "2023-12-24", "2023-12-28");
+
+DELETE FROM Reservation
+WHERE GuestId = 
+	(SELECT GuestId
+	FROM Guest
+    WHERE FirstName = "Jeremiah" AND LastName = "Pendergrass");
+
+SET SQL_SAFE_UPDATES = 0;
+
+DELETE FROM Guest
+WHERE FirstName = "Jeremiah" AND LastName = "Pendergrass";
+
+SET SQL_SAFE_UPDATES = 1;
